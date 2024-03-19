@@ -28,8 +28,7 @@ class Graph:
         if n2 not in self.adjacency_list:
             self.addNode(n2)
         self.adjacency_list[n1].append((n2, weight))
-        self.adjacency_list[n2].append((n1, weight))  # Since the graph is undirected
-
+        self.adjacency_list[n2].append((n1, weight)) 
     def removeEdge(self, n1, n2):
         self.adjacency_list[n1] = [neighbor for neighbor in self.adjacency_list[n1] if neighbor[0] != n2]
         self.adjacency_list[n2] = [neighbor for neighbor in self.adjacency_list[n2] if neighbor[0] != n1]
@@ -58,4 +57,4 @@ class Graph:
 
 # Example usage
 graph = Graph()
-graph.importFromFile('your_graph_file.dot')  # Replace 'your_graph_file.dot' with your GraphViz file path
+graph.importFromFile(#file path)  
